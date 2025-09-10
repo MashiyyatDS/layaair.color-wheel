@@ -1,0 +1,50 @@
+{
+  "_$ver": 1,
+  "_$id": "gi9kkocz",
+  "_$type": "ViewStack",
+  "name": "Coin",
+  "width": 80,
+  "height": 80,
+  "anchorX": 0.5,
+  "anchorY": 0.5,
+  "selectedIndex": null,
+  "_$comp": [
+    {
+      "_$type": "2182a38e-74e9-444e-a71a-19fd84b8fcbc",
+      "scriptPath": "../src/components/Coin.ts"
+    }
+  ],
+  "_$child": [
+    {
+      "_$id": "cwghxxrr",
+      "_$type": "Image",
+      "name": "Image",
+      "x": 40,
+      "y": 40,
+      "width": 80,
+      "height": 80,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "skin": "res://91551022-12a3-4742-b315-59d4de942d25",
+      "color": "#ffffff"
+    },
+    {
+      "_$id": "pihfjycc",
+      "_$type": "Label",
+      "name": "Label",
+      "x": 40,
+      "y": 40,
+      "width": 80,
+      "height": 80,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "text": "10",
+      "font": "res://f677a37b-de39-486f-934f-bee419c1cb6e",
+      "fontSize": 20,
+      "color": "#ffffff",
+      "align": "center",
+      "valign": "middle",
+      "stroke": 3
+    }
+  ]
+}

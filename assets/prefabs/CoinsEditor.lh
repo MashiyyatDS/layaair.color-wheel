@@ -1,0 +1,1055 @@
+{
+  "_$ver": 1,
+  "_$id": "m6dkwdiv",
+  "_$type": "ViewStack",
+  "name": "CoinsEditor",
+  "width": 500,
+  "height": 700,
+  "_mouseState": 2,
+  "selectedIndex": null,
+  "_$comp": [
+    {
+      "_$type": "8b69be1a-013d-4850-bf70-3cc6ef1eb016",
+      "scriptPath": "../src/components/CoinsEditor.ts",
+      "coinsEditor": {
+        "_$ref": "m6dkwdiv"
+      },
+      "cancelButton": {
+        "_$ref": "ix223a51"
+      },
+      "saveButton": {
+        "_$ref": "oaraq8ib"
+      },
+      "closeButton": {
+        "_$ref": "hv1f4rlm"
+      },
+      "editButton": {
+        "_$ref": "6hruqst7"
+      }
+    }
+  ],
+  "_$child": [
+    {
+      "_$id": "86k08vz7",
+      "_$type": "Image",
+      "name": "Frame",
+      "x": 249,
+      "y": 349,
+      "width": 492,
+      "height": 689,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "skin": "res://cfeef2b9-a4ce-40cb-adbb-1e6d5a2a2cf9",
+      "color": "#ffffff"
+    },
+    {
+      "_$id": "hv1f4rlm",
+      "_$type": "Sprite",
+      "name": "CloseButton",
+      "x": 477,
+      "y": 45,
+      "width": 45,
+      "height": 45,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "texture": {
+        "_$uuid": "57063b9a-0b1b-4bb6-9e9a-25424ec2a323",
+        "_$type": "Texture"
+      }
+    },
+    {
+      "_$id": "6mhpkcak",
+      "_$type": "Label",
+      "name": "Header",
+      "x": 250,
+      "y": 38,
+      "width": 294,
+      "height": 57,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "text": "Edit Coins",
+      "font": "res://48b1be50-44cc-46f7-9198-613e7378b9e1",
+      "fontSize": 55,
+      "color": "#ffffff",
+      "align": "center",
+      "valign": "middle",
+      "stroke": 15,
+      "strokeColor": "#cb7235"
+    },
+    {
+      "_$id": "nzvbn4m9",
+      "_$type": "ViewStack",
+      "name": "CoinSlots",
+      "x": 250,
+      "y": 301,
+      "width": 440,
+      "height": 450,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "selectedIndex": null,
+      "_$child": [
+        {
+          "_$id": "eeq8xza0",
+          "_$prefab": "085e7261-2fd7-4856-928e-61f325c3dddb",
+          "name": "Slot1",
+          "active": true,
+          "x": 55,
+          "y": 75,
+          "visible": true,
+          "_$comp": [
+            {
+              "_$type": "9daaf189-76e1-4245-aa54-336369fc3958",
+              "scriptPath": "../src/components/CoinsEditorItem.ts",
+              "coinsEditor": {
+                "_$ref": "m6dkwdiv"
+              }
+            }
+          ]
+        },
+        {
+          "_$id": "ish5rtp7",
+          "_$type": "ViewStack",
+          "name": "Slot2",
+          "x": 165,
+          "y": 75,
+          "width": 100,
+          "height": 150,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "selectedIndex": null,
+          "_$comp": [
+            {
+              "_$type": "9daaf189-76e1-4245-aa54-336369fc3958",
+              "scriptPath": "../src/components/CoinsEditorItem.ts",
+              "coinsEditor": {
+                "_$ref": "m6dkwdiv"
+              }
+            }
+          ],
+          "_$child": [
+            {
+              "_$id": "gojs4a2j",
+              "_$type": "Image",
+              "name": "Image",
+              "x": 50,
+              "y": 50,
+              "width": 100,
+              "height": 100,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "skin": "res://91551022-12a3-4742-b315-59d4de942d25",
+              "color": "#ffffff"
+            },
+            {
+              "_$id": "i8g7mvxu",
+              "_$type": "Label",
+              "name": "Label",
+              "x": 50,
+              "y": 50,
+              "width": 100,
+              "height": 100,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "text": "0",
+              "font": "res://f677a37b-de39-486f-934f-bee419c1cb6e",
+              "fontSize": 20,
+              "color": "#ffffff",
+              "align": "center",
+              "valign": "middle",
+              "stroke": 3
+            },
+            {
+              "_$id": "4qgxk3mt",
+              "_$type": "Label",
+              "name": "Amount",
+              "x": 50,
+              "y": 115,
+              "width": 100,
+              "height": 28,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "text": "0",
+              "font": "res://48b1be50-44cc-46f7-9198-613e7378b9e1",
+              "fontSize": 17,
+              "color": "#ffffff",
+              "align": "center",
+              "valign": "middle",
+              "stroke": 4,
+              "strokeColor": "#b34e00"
+            }
+          ]
+        },
+        {
+          "_$id": "en5xn463",
+          "_$type": "ViewStack",
+          "name": "Slot3",
+          "x": 275,
+          "y": 75,
+          "width": 100,
+          "height": 150,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "selectedIndex": null,
+          "_$comp": [
+            {
+              "_$type": "9daaf189-76e1-4245-aa54-336369fc3958",
+              "scriptPath": "../src/components/CoinsEditorItem.ts",
+              "coinsEditor": {
+                "_$ref": "m6dkwdiv"
+              }
+            }
+          ],
+          "_$child": [
+            {
+              "_$id": "yf0ofn5z",
+              "_$type": "Image",
+              "name": "Image",
+              "x": 50,
+              "y": 50,
+              "width": 100,
+              "height": 100,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "skin": "res://91551022-12a3-4742-b315-59d4de942d25",
+              "color": "#ffffff"
+            },
+            {
+              "_$id": "vi5sc904",
+              "_$type": "Label",
+              "name": "Label",
+              "x": 50,
+              "y": 50,
+              "width": 100,
+              "height": 100,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "text": "0",
+              "font": "res://f677a37b-de39-486f-934f-bee419c1cb6e",
+              "fontSize": 20,
+              "color": "#ffffff",
+              "align": "center",
+              "valign": "middle",
+              "stroke": 3
+            },
+            {
+              "_$id": "qn4n0i4t",
+              "_$type": "Label",
+              "name": "Amount",
+              "x": 50,
+              "y": 115,
+              "width": 100,
+              "height": 28,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "text": "0",
+              "font": "res://48b1be50-44cc-46f7-9198-613e7378b9e1",
+              "fontSize": 17,
+              "color": "#ffffff",
+              "align": "center",
+              "valign": "middle",
+              "stroke": 4,
+              "strokeColor": "#b34e00"
+            }
+          ]
+        },
+        {
+          "_$id": "8nu4npct",
+          "_$type": "ViewStack",
+          "name": "Slot4",
+          "x": 385,
+          "y": 75,
+          "width": 100,
+          "height": 150,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "selectedIndex": null,
+          "_$comp": [
+            {
+              "_$type": "9daaf189-76e1-4245-aa54-336369fc3958",
+              "scriptPath": "../src/components/CoinsEditorItem.ts",
+              "coinsEditor": {
+                "_$ref": "m6dkwdiv"
+              }
+            }
+          ],
+          "_$child": [
+            {
+              "_$id": "gz15g1os",
+              "_$type": "Image",
+              "name": "Image",
+              "x": 50,
+              "y": 50,
+              "width": 100,
+              "height": 100,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "skin": "res://91551022-12a3-4742-b315-59d4de942d25",
+              "color": "#ffffff"
+            },
+            {
+              "_$id": "alkm033a",
+              "_$type": "Label",
+              "name": "Label",
+              "x": 50,
+              "y": 50,
+              "width": 100,
+              "height": 100,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "text": "0",
+              "font": "res://f677a37b-de39-486f-934f-bee419c1cb6e",
+              "fontSize": 20,
+              "color": "#ffffff",
+              "align": "center",
+              "valign": "middle",
+              "stroke": 3
+            },
+            {
+              "_$id": "kf0x3q98",
+              "_$type": "Label",
+              "name": "Amount",
+              "x": 50,
+              "y": 115,
+              "width": 100,
+              "height": 28,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "text": "0",
+              "font": "res://48b1be50-44cc-46f7-9198-613e7378b9e1",
+              "fontSize": 17,
+              "color": "#ffffff",
+              "align": "center",
+              "valign": "middle",
+              "stroke": 4,
+              "strokeColor": "#b34e00"
+            }
+          ]
+        },
+        {
+          "_$id": "83xtavfd",
+          "_$type": "ViewStack",
+          "name": "Slot5",
+          "x": 55,
+          "y": 225,
+          "width": 100,
+          "height": 150,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "selectedIndex": null,
+          "_$comp": [
+            {
+              "_$type": "9daaf189-76e1-4245-aa54-336369fc3958",
+              "scriptPath": "../src/components/CoinsEditorItem.ts",
+              "coinsEditor": {
+                "_$ref": "m6dkwdiv"
+              }
+            }
+          ],
+          "_$child": [
+            {
+              "_$id": "98n8zry6",
+              "_$type": "Image",
+              "name": "Image",
+              "x": 50,
+              "y": 50,
+              "width": 100,
+              "height": 100,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "skin": "res://91551022-12a3-4742-b315-59d4de942d25",
+              "color": "#ffffff"
+            },
+            {
+              "_$id": "n4uz64pk",
+              "_$type": "Label",
+              "name": "Label",
+              "x": 50,
+              "y": 50,
+              "width": 100,
+              "height": 100,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "text": "0",
+              "font": "res://f677a37b-de39-486f-934f-bee419c1cb6e",
+              "fontSize": 20,
+              "color": "#ffffff",
+              "align": "center",
+              "valign": "middle",
+              "stroke": 3
+            },
+            {
+              "_$id": "pxzgava4",
+              "_$type": "Label",
+              "name": "Amount",
+              "x": 50,
+              "y": 115,
+              "width": 100,
+              "height": 28,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "text": "0",
+              "font": "res://48b1be50-44cc-46f7-9198-613e7378b9e1",
+              "fontSize": 17,
+              "color": "#ffffff",
+              "align": "center",
+              "valign": "middle",
+              "stroke": 4,
+              "strokeColor": "#b34e00"
+            }
+          ]
+        },
+        {
+          "_$id": "18abcx18",
+          "_$type": "ViewStack",
+          "name": "Slot6",
+          "x": 165,
+          "y": 225,
+          "width": 100,
+          "height": 150,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "selectedIndex": null,
+          "_$comp": [
+            {
+              "_$type": "9daaf189-76e1-4245-aa54-336369fc3958",
+              "scriptPath": "../src/components/CoinsEditorItem.ts",
+              "coinsEditor": {
+                "_$ref": "m6dkwdiv"
+              }
+            }
+          ],
+          "_$child": [
+            {
+              "_$id": "xcs8815l",
+              "_$type": "Image",
+              "name": "Image",
+              "x": 50,
+              "y": 50,
+              "width": 100,
+              "height": 100,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "skin": "res://91551022-12a3-4742-b315-59d4de942d25",
+              "color": "#ffffff"
+            },
+            {
+              "_$id": "ababhu1m",
+              "_$type": "Label",
+              "name": "Label",
+              "x": 50,
+              "y": 50,
+              "width": 100,
+              "height": 100,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "text": "0",
+              "font": "res://f677a37b-de39-486f-934f-bee419c1cb6e",
+              "fontSize": 20,
+              "color": "#ffffff",
+              "align": "center",
+              "valign": "middle",
+              "stroke": 3
+            },
+            {
+              "_$id": "nsmu837n",
+              "_$type": "Label",
+              "name": "Amount",
+              "x": 50,
+              "y": 115,
+              "width": 100,
+              "height": 28,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "text": "0",
+              "font": "res://48b1be50-44cc-46f7-9198-613e7378b9e1",
+              "fontSize": 17,
+              "color": "#ffffff",
+              "align": "center",
+              "valign": "middle",
+              "stroke": 4,
+              "strokeColor": "#b34e00"
+            }
+          ]
+        },
+        {
+          "_$id": "8394wx04",
+          "_$type": "ViewStack",
+          "name": "Slot7",
+          "x": 275,
+          "y": 225,
+          "width": 100,
+          "height": 150,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "selectedIndex": null,
+          "_$comp": [
+            {
+              "_$type": "9daaf189-76e1-4245-aa54-336369fc3958",
+              "scriptPath": "../src/components/CoinsEditorItem.ts",
+              "coinsEditor": {
+                "_$ref": "m6dkwdiv"
+              }
+            }
+          ],
+          "_$child": [
+            {
+              "_$id": "ci2rtwqt",
+              "_$type": "Image",
+              "name": "Image",
+              "x": 50,
+              "y": 50,
+              "width": 100,
+              "height": 100,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "skin": "res://91551022-12a3-4742-b315-59d4de942d25",
+              "color": "#ffffff"
+            },
+            {
+              "_$id": "sf8i2qa1",
+              "_$type": "Label",
+              "name": "Label",
+              "x": 50,
+              "y": 50,
+              "width": 100,
+              "height": 100,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "text": "0",
+              "font": "res://f677a37b-de39-486f-934f-bee419c1cb6e",
+              "fontSize": 20,
+              "color": "#ffffff",
+              "align": "center",
+              "valign": "middle",
+              "stroke": 3
+            },
+            {
+              "_$id": "8pfk2n8u",
+              "_$type": "Label",
+              "name": "Amount",
+              "x": 50,
+              "y": 115,
+              "width": 100,
+              "height": 28,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "text": "0",
+              "font": "res://48b1be50-44cc-46f7-9198-613e7378b9e1",
+              "fontSize": 17,
+              "color": "#ffffff",
+              "align": "center",
+              "valign": "middle",
+              "stroke": 4,
+              "strokeColor": "#b34e00"
+            }
+          ]
+        },
+        {
+          "_$id": "ywmnp1ow",
+          "_$type": "ViewStack",
+          "name": "Slot8",
+          "x": 385,
+          "y": 225,
+          "width": 100,
+          "height": 150,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "selectedIndex": null,
+          "_$comp": [
+            {
+              "_$type": "9daaf189-76e1-4245-aa54-336369fc3958",
+              "scriptPath": "../src/components/CoinsEditorItem.ts",
+              "coinsEditor": {
+                "_$ref": "m6dkwdiv"
+              }
+            }
+          ],
+          "_$child": [
+            {
+              "_$id": "2o515gg5",
+              "_$type": "Image",
+              "name": "Image",
+              "x": 50,
+              "y": 50,
+              "width": 100,
+              "height": 100,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "skin": "res://91551022-12a3-4742-b315-59d4de942d25",
+              "color": "#ffffff"
+            },
+            {
+              "_$id": "jn3xhylt",
+              "_$type": "Label",
+              "name": "Label",
+              "x": 50,
+              "y": 50,
+              "width": 100,
+              "height": 100,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "text": "0",
+              "font": "res://f677a37b-de39-486f-934f-bee419c1cb6e",
+              "fontSize": 20,
+              "color": "#ffffff",
+              "align": "center",
+              "valign": "middle",
+              "stroke": 3
+            },
+            {
+              "_$id": "cbzirwge",
+              "_$type": "Label",
+              "name": "Amount",
+              "x": 50,
+              "y": 115,
+              "width": 100,
+              "height": 28,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "text": "0",
+              "font": "res://48b1be50-44cc-46f7-9198-613e7378b9e1",
+              "fontSize": 17,
+              "color": "#ffffff",
+              "align": "center",
+              "valign": "middle",
+              "stroke": 4,
+              "strokeColor": "#b34e00"
+            }
+          ]
+        },
+        {
+          "_$id": "n1x3e5f4",
+          "_$type": "ViewStack",
+          "name": "Slot9",
+          "x": 55,
+          "y": 375,
+          "width": 100,
+          "height": 150,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "selectedIndex": null,
+          "_$comp": [
+            {
+              "_$type": "9daaf189-76e1-4245-aa54-336369fc3958",
+              "scriptPath": "../src/components/CoinsEditorItem.ts",
+              "coinsEditor": {
+                "_$ref": "m6dkwdiv"
+              }
+            }
+          ],
+          "_$child": [
+            {
+              "_$id": "kovmfviu",
+              "_$type": "Image",
+              "name": "Image",
+              "x": 50,
+              "y": 50,
+              "width": 100,
+              "height": 100,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "skin": "res://91551022-12a3-4742-b315-59d4de942d25",
+              "color": "#ffffff"
+            },
+            {
+              "_$id": "w9k2n48x",
+              "_$type": "Label",
+              "name": "Label",
+              "x": 50,
+              "y": 50,
+              "width": 100,
+              "height": 100,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "text": "0",
+              "font": "res://f677a37b-de39-486f-934f-bee419c1cb6e",
+              "fontSize": 20,
+              "color": "#ffffff",
+              "align": "center",
+              "valign": "middle",
+              "stroke": 3
+            },
+            {
+              "_$id": "mvh2dez5",
+              "_$type": "Label",
+              "name": "Amount",
+              "x": 50,
+              "y": 115,
+              "width": 100,
+              "height": 28,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "text": "0",
+              "font": "res://48b1be50-44cc-46f7-9198-613e7378b9e1",
+              "fontSize": 17,
+              "color": "#ffffff",
+              "align": "center",
+              "valign": "middle",
+              "stroke": 4,
+              "strokeColor": "#b34e00"
+            }
+          ]
+        },
+        {
+          "_$id": "sw1wdyuo",
+          "_$type": "ViewStack",
+          "name": "Slot10",
+          "x": 165,
+          "y": 375,
+          "width": 100,
+          "height": 150,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "selectedIndex": null,
+          "_$comp": [
+            {
+              "_$type": "9daaf189-76e1-4245-aa54-336369fc3958",
+              "scriptPath": "../src/components/CoinsEditorItem.ts",
+              "coinsEditor": {
+                "_$ref": "m6dkwdiv"
+              }
+            }
+          ],
+          "_$child": [
+            {
+              "_$id": "pw2g7vg3",
+              "_$type": "Image",
+              "name": "Image",
+              "x": 50,
+              "y": 50,
+              "width": 100,
+              "height": 100,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "skin": "res://91551022-12a3-4742-b315-59d4de942d25",
+              "color": "#ffffff"
+            },
+            {
+              "_$id": "fjnwjzz4",
+              "_$type": "Label",
+              "name": "Label",
+              "x": 50,
+              "y": 50,
+              "width": 100,
+              "height": 100,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "text": "0",
+              "font": "res://f677a37b-de39-486f-934f-bee419c1cb6e",
+              "fontSize": 20,
+              "color": "#ffffff",
+              "align": "center",
+              "valign": "middle",
+              "stroke": 3
+            },
+            {
+              "_$id": "0skl42y3",
+              "_$type": "Label",
+              "name": "Amount",
+              "x": 50,
+              "y": 115,
+              "width": 100,
+              "height": 28,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "text": "0",
+              "font": "res://48b1be50-44cc-46f7-9198-613e7378b9e1",
+              "fontSize": 17,
+              "color": "#ffffff",
+              "align": "center",
+              "valign": "middle",
+              "stroke": 4,
+              "strokeColor": "#b34e00"
+            }
+          ]
+        },
+        {
+          "_$id": "bqm2frdq",
+          "_$type": "ViewStack",
+          "name": "Slot11",
+          "x": 275,
+          "y": 375,
+          "width": 100,
+          "height": 150,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "selectedIndex": null,
+          "_$comp": [
+            {
+              "_$type": "9daaf189-76e1-4245-aa54-336369fc3958",
+              "scriptPath": "../src/components/CoinsEditorItem.ts",
+              "coinsEditor": {
+                "_$ref": "m6dkwdiv"
+              }
+            }
+          ],
+          "_$child": [
+            {
+              "_$id": "jp6sq4r5",
+              "_$type": "Image",
+              "name": "Image",
+              "x": 50,
+              "y": 50,
+              "width": 100,
+              "height": 100,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "skin": "res://91551022-12a3-4742-b315-59d4de942d25",
+              "color": "#ffffff"
+            },
+            {
+              "_$id": "2dbeebfe",
+              "_$type": "Label",
+              "name": "Label",
+              "x": 50,
+              "y": 50,
+              "width": 100,
+              "height": 100,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "text": "0",
+              "font": "res://f677a37b-de39-486f-934f-bee419c1cb6e",
+              "fontSize": 20,
+              "color": "#ffffff",
+              "align": "center",
+              "valign": "middle",
+              "stroke": 3
+            },
+            {
+              "_$id": "dg2qq8kh",
+              "_$type": "Label",
+              "name": "Amount",
+              "x": 50,
+              "y": 115,
+              "width": 100,
+              "height": 28,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "text": "0",
+              "font": "res://48b1be50-44cc-46f7-9198-613e7378b9e1",
+              "fontSize": 17,
+              "color": "#ffffff",
+              "align": "center",
+              "valign": "middle",
+              "stroke": 4,
+              "strokeColor": "#b34e00"
+            }
+          ]
+        },
+        {
+          "_$id": "074zfyx9",
+          "_$type": "ViewStack",
+          "name": "Slot12",
+          "x": 385,
+          "y": 375,
+          "width": 100,
+          "height": 150,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "selectedIndex": null,
+          "_$comp": [
+            {
+              "_$type": "9daaf189-76e1-4245-aa54-336369fc3958",
+              "scriptPath": "../src/components/CoinsEditorItem.ts",
+              "coinsEditor": {
+                "_$ref": "m6dkwdiv"
+              }
+            }
+          ],
+          "_$child": [
+            {
+              "_$id": "8rkfinjh",
+              "_$type": "Image",
+              "name": "Image",
+              "x": 50,
+              "y": 50,
+              "width": 100,
+              "height": 100,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "skin": "res://91551022-12a3-4742-b315-59d4de942d25",
+              "color": "#ffffff"
+            },
+            {
+              "_$id": "w6g9smao",
+              "_$type": "Label",
+              "name": "Label",
+              "x": 50,
+              "y": 50,
+              "width": 100,
+              "height": 100,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "text": "0",
+              "font": "res://f677a37b-de39-486f-934f-bee419c1cb6e",
+              "fontSize": 20,
+              "color": "#ffffff",
+              "align": "center",
+              "valign": "middle",
+              "stroke": 3
+            },
+            {
+              "_$id": "2iibeso9",
+              "_$type": "Label",
+              "name": "Amount",
+              "x": 50,
+              "y": 115,
+              "width": 100,
+              "height": 28,
+              "anchorX": 0.5,
+              "anchorY": 0.5,
+              "text": "0",
+              "font": "res://48b1be50-44cc-46f7-9198-613e7378b9e1",
+              "fontSize": 17,
+              "color": "#ffffff",
+              "align": "center",
+              "valign": "middle",
+              "stroke": 4,
+              "strokeColor": "#b34e00"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "_$id": "ix223a51",
+      "_$type": "ViewStack",
+      "name": "CancelButton",
+      "x": 122,
+      "y": 591,
+      "width": 175,
+      "height": 60,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "visible": false,
+      "selectedIndex": null,
+      "_$child": [
+        {
+          "_$id": "kfu46jtd",
+          "_$type": "Image",
+          "name": "Image",
+          "x": 87,
+          "y": 29,
+          "width": 175,
+          "height": 59,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "skin": "res://78ea024e-0f97-405a-9e4c-029e0ce67fcf",
+          "color": "#ffffff"
+        },
+        {
+          "_$id": "sx81byxd",
+          "_$type": "Label",
+          "name": "Label",
+          "x": 87,
+          "y": 27,
+          "width": 175,
+          "height": 55,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "text": "Cancel",
+          "font": "res://f677a37b-de39-486f-934f-bee419c1cb6e",
+          "fontSize": 25,
+          "color": "#ffffff",
+          "align": "center",
+          "valign": "middle",
+          "stroke": 4,
+          "strokeColor": "#058441"
+        }
+      ]
+    },
+    {
+      "_$id": "oaraq8ib",
+      "_$type": "ViewStack",
+      "name": "SaveButton",
+      "x": 377,
+      "y": 591,
+      "width": 175,
+      "height": 60,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "visible": false,
+      "selectedIndex": null,
+      "_$child": [
+        {
+          "_$id": "ojwwvg26",
+          "_$type": "Image",
+          "name": "Image",
+          "x": 87,
+          "y": 29,
+          "width": 175,
+          "height": 59,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "skin": "res://78ea024e-0f97-405a-9e4c-029e0ce67fcf",
+          "color": "#ffffff"
+        },
+        {
+          "_$id": "u4kq4evv",
+          "_$type": "Label",
+          "name": "Label",
+          "x": 87,
+          "y": 27,
+          "width": 175,
+          "height": 55,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "text": "Save",
+          "font": "res://f677a37b-de39-486f-934f-bee419c1cb6e",
+          "fontSize": 25,
+          "color": "#ffffff",
+          "align": "center",
+          "valign": "middle",
+          "stroke": 4,
+          "strokeColor": "#058441"
+        }
+      ]
+    },
+    {
+      "_$id": "6hruqst7",
+      "_$type": "ViewStack",
+      "name": "EditButton",
+      "x": 249,
+      "y": 591,
+      "width": 175,
+      "height": 60,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "selectedIndex": null,
+      "_$child": [
+        {
+          "_$id": "lsalfkam",
+          "_$type": "Image",
+          "name": "Image",
+          "x": 87,
+          "y": 29,
+          "width": 175,
+          "height": 59,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "skin": "res://78ea024e-0f97-405a-9e4c-029e0ce67fcf",
+          "color": "#ffffff"
+        },
+        {
+          "_$id": "y2s0ju5o",
+          "_$type": "Label",
+          "name": "Label",
+          "x": 87,
+          "y": 27,
+          "width": 175,
+          "height": 55,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "text": "Edit",
+          "font": "res://f677a37b-de39-486f-934f-bee419c1cb6e",
+          "fontSize": 25,
+          "color": "#ffffff",
+          "align": "center",
+          "valign": "middle",
+          "stroke": 4,
+          "strokeColor": "#058441"
+        }
+      ]
+    }
+  ]
+}

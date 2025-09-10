@@ -1,0 +1,38 @@
+{
+  "resolution": {
+    "designWidth": 720,
+    "designHeight": 1080,
+    "scaleMode": "showall",
+    "alignV": "middle",
+    "alignH": "center",
+    "backgroundColor": "#242424"
+  },
+  "2D": {
+    "FPS": 120
+  },
+  "physics2D": {
+    "defaultConfig": {
+      "allowSleeping": false,
+      "gravity": {
+        "x": 0,
+        "y": 9.8
+      },
+      "velocityIterations": 8,
+      "positionIterations": 3,
+      "pixelRatio": 50,
+      "debugDraw": true,
+      "drawShape": true,
+      "drawJoint": true,
+      "drawAABB": false,
+      "drawCenterOfMass": false,
+      "subStep": null
+    }
+  },
+  "modules": {
+    "laya.ui": true,
+    "laya.d3": true
+  },
+  "splash": {
+    "fit": "center"
+  }
+}

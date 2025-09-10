@@ -1,0 +1,73 @@
+{
+  "_$ver": 1,
+  "_$id": "zbgoniax",
+  "_$type": "ViewStack",
+  "name": "BettingArea",
+  "width": 220,
+  "height": 155,
+  "_mouseState": 2,
+  "selectedIndex": null,
+  "_$comp": [
+    {
+      "_$type": "42063f47-a303-45f4-9818-664d73fa0350",
+      "scriptPath": "../src/components/BettingArea.ts",
+      "type": null,
+      "dim": {
+        "_$ref": "o1xkz1rx"
+      },
+      "amountLabel": {
+        "_$ref": "9z5l08gk"
+      },
+      "bettingArea": {
+        "_$ref": "zbgoniax"
+      },
+      "coinPrefab": {
+        "_$uuid": "a8a2fdf5-2876-45d8-a572-e24930dbd8b5",
+        "_$type": "Prefab"
+      }
+    }
+  ],
+  "_$child": [
+    {
+      "_$id": "o1xkz1rx",
+      "_$type": "Sprite",
+      "name": "Dim",
+      "x": 110,
+      "y": 78,
+      "width": 220,
+      "height": 155,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "alpha": 0,
+      "_gcmds": [
+        {
+          "_$type": "DrawRoundRectCmd",
+          "lt": 10,
+          "rt": 10,
+          "lb": 10,
+          "rb": 10,
+          "fillColor": "#000000"
+        }
+      ]
+    },
+    {
+      "_$id": "9z5l08gk",
+      "_$type": "Label",
+      "name": "Amount",
+      "x": 103,
+      "y": 122,
+      "width": 206,
+      "height": 28,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "text": "100",
+      "font": "res://48b1be50-44cc-46f7-9198-613e7378b9e1",
+      "fontSize": 15,
+      "color": "#ffffff",
+      "align": "right",
+      "valign": "middle",
+      "stroke": 3,
+      "strokeColor": "#2b2b2b"
+    }
+  ]
+}

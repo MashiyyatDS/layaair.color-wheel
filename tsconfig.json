@@ -1,0 +1,22 @@
+{
+	"compilerOptions": {
+		"module": "es2020",
+		"target": "es2020",
+		"strict": true,
+		"strictNullChecks": false,
+		"noEmitHelpers": true,
+		"sourceMap": false,
+		"experimentalDecorators": true,
+		"skipLibCheck": true,
+		"moduleResolution": "node",
+		"allowSyntheticDefaultImports": true,
+		"paths": {
+			"~/*": ["./src/*"],
+			"~/packages/*": ["./library/packages/*"],
+			"~~/*": ["../../*"],
+			"@@/*": ["../../*"]
+		}
+	},
+	//"extends": "./.nitro/types/tsconfig.json",
+	"include": ["./assets", "./src", "./engine"]
+}

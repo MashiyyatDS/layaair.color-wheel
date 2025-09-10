@@ -1,0 +1,35 @@
+{
+  "_$ver": 1,
+  "_$id": "rrr2wad0",
+  "_$type": "Box",
+  "name": "Character",
+  "width": 150,
+  "height": 200,
+  "anchorX": 0.5,
+  "anchorY": 0.5,
+  "bgColor": "#484848",
+  "_$comp": [
+    {
+      "_$type": "8db578c4-ab86-4ebd-83aa-ac605c30e459",
+      "scriptPath": "../src/components/Character.ts",
+      "character": {
+        "_$ref": "rrr2wad0"
+      }
+    }
+  ],
+  "_$child": [
+    {
+      "_$id": "pr83kpi1",
+      "_$type": "Image",
+      "name": "Image",
+      "x": 74,
+      "y": 99,
+      "width": 140,
+      "height": 195,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "skin": "res://59b60604-b5eb-4c54-a4f3-4506dd407c9f",
+      "color": "#ffffff"
+    }
+  ]
+}
