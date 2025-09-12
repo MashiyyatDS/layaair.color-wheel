@@ -1,6 +1,8 @@
 interface EmitType {
 	coin: 'selected' | 'updated'
-	'game-state': 'confirmed' | 'start'
+	'game-state': 'confirmed' | 'start' | 'dealing' | 'settling' | 'betting'
+	buttons: 'confirmed' | 'canceled' | 'rebet'
+	main: 'started' | 'balance-updated' | 'snackbar'
 }
 
 const emit = new Laya.EventDispatcher()

@@ -3,6 +3,7 @@ import user from '~/states/user'
 import { Coin } from './Coin'
 import gsap, { Back, Linear } from 'gsap'
 import useEmit from '~/composables/useEmit'
+import { Snackbar } from './Snackbar'
 
 const { regClass, property } = Laya
 
@@ -32,12 +33,22 @@ export class BettingArea extends Laya.Script {
 	@property(Laya.Prefab)
 	private coinPrefab: Laya.Prefab
 
-	public betAmount = 0
-	public confirmedBetAmount = 0
+	public minimumBet = 100
+	public maximumBet = 500
+
+	public bet = {
+		total: 0,
+		placed: 0,
+		confirmed: 0,
+		amount: 0,
+	}
+
+	private snackbar: Laya.ViewStack
 	onAwake(): void {
+		this.snackbar = this.owner.scene.getChildByName('Snackbar') as Laya.ViewStack
 		addHoverPointer(this.bettingArea)
 
-		this.amountLabel.text = formatCurrency(this.betAmount, 'PHP').cm
+		this.amountLabel.text = formatCurrency(this.bet.amount, 'PHP').cm
 
 		useEmit().listen({
 			'game-state': {
@@ -49,23 +60,23 @@ export class BettingArea extends Laya.Script {
 						'AppendCoin'
 					) as Laya.ViewStack
 
-					if (appendCoin)
-						gsap.to(appendCoin, {
-							x: 175,
-							y: 45,
-							duration: 0.3,
-						})
+					if (appendCoin) gsap.to(appendCoin, { x: 175, y: 45, duration: 0.3 })
 				},
 			},
 		})
 	}
 
 	onMouseClick(): void {
-		this.betAmount += Number(user.selectedCoin)
+		const amount = this.getBetAmount(+user.selectedCoin)
 
-		this.appendCoin(this.betAmount + this.confirmedBetAmount)
+		this.bet.amount += amount
+		this.bet.placed += amount
 
-		animateNumbers(this.amountLabel, this.betAmount + this.confirmedBetAmount)
+		if (amount) {
+			this.appendCoin(this.bet.placed + this.bet.confirmed)
+
+			animateNumbers(this.amountLabel, this.bet.placed + this.bet.confirmed)
+		}
 	}
 
 	private coinPosition: CoinPosition = {
@@ -149,34 +160,72 @@ export class BettingArea extends Laya.Script {
 	}
 
 	confirmBet() {
-		if (!this.betAmount) return
+		if (!this.bet.placed) return
 
-		this.confirmedBetAmount += this.betAmount
+		this.bet.confirmed += this.bet.placed
+		this.bet.placed = 0
 
-		animateNumbers(this.amountLabel, this.confirmedBetAmount)
-
-		this.betAmount = 0
+		animateNumbers(this.amountLabel, this.bet.confirmed)
+		user.balance = user.tempBalance
 	}
 
 	cancelBet() {
 		this.removeCoin()
 
-		this.betAmount = 0
+		this.bet.amount = 0
+		this.bet.placed = 0
 
-		animateNumbers(this.amountLabel, this.confirmedBetAmount)
+		user.tempBalance = user.balance
 
-		if (this.confirmedBetAmount) {
-			this.appendCoin(this.confirmedBetAmount)
+		animateNumbers(this.amountLabel, this.bet.confirmed)
+
+		if (this.bet.confirmed) {
+			this.appendCoin(this.bet.confirmed)
 		}
 	}
 
 	resetBet() {
 		this.removeCoin()
-		this.betAmount = 0
-		this.confirmedBetAmount = 0
+		this.bet.amount = 0
+		this.bet.confirmed = 0
+		this.bet.placed = 0
+
+		user.tempBalance = user.balance
+
 		animateNumbers(this.amountLabel, 0)
 
 		this.toggleDim(false)
+	}
+
+	getBetAmount(amount: number): number {
+		const snackbar = this.snackbar.getComponent(Snackbar)
+		if (user.tempBalance < 1) {
+			snackbar.toggle('Insufficient\nBalance')
+
+			return 0
+		}
+
+		if (amount < this.minimumBet && user.tempBalance < this.minimumBet) {
+			amount = user.tempBalance
+		} else if (amount < this.minimumBet) {
+			snackbar.toggle(`Minimum bet\n${formatCurrency(this.minimumBet, 'PHP').cm}`)
+
+			return 0
+		}
+
+		if (this.bet.amount + amount > this.maximumBet) {
+			snackbar.toggle(`Maximum bet\n${formatCurrency(this.maximumBet, 'PHP').cm}`)
+
+			amount = this.maximumBet - this.bet.amount
+		}
+
+		if (amount > user.tempBalance) {
+			amount = user.tempBalance
+		}
+
+		user.tempBalance -= amount
+
+		return amount
 	}
 
 	toggleDim(show: boolean = true) {

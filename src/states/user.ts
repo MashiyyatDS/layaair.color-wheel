@@ -14,5 +14,6 @@ export default {
 		{ active: false, amount: '400000', selected: false },
 		{ active: false, amount: '1500000', selected: false },
 	],
-	balance: '1000',
+	balance: 100000,
+	tempBalance: 100000,
 }

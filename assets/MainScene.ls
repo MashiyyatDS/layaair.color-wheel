@@ -18,6 +18,18 @@
       },
       "wheel": {
         "_$ref": "sajhwqah"
+      },
+      "bettingAreaContainer": {
+        "_$ref": "nyaf6d40"
+      },
+      "coinsContainer": {
+        "_$ref": "7si7qkkh"
+      },
+      "gameButtons": {
+        "_$ref": "rigfoz01"
+      },
+      "person": {
+        "_$ref": "qro1duvc"
       }
     }
   ],
@@ -38,28 +50,80 @@
       "color": "#ffffff"
     },
     {
-      "_$id": "sajhwqah",
+      "_$id": "2ap8152r",
       "_$type": "ViewStack",
-      "name": "Wheel",
-      "x": 360,
-      "y": 469,
-      "width": 900,
-      "height": 900,
+      "name": "Toolbar",
+      "x": 361,
+      "y": 80,
+      "width": 720,
+      "height": 200,
       "anchorX": 0.5,
       "anchorY": 0.5,
       "selectedIndex": null,
       "_$child": [
         {
+          "_$id": "bu55gh1r",
+          "_$type": "Image",
+          "name": "Image",
+          "x": 359,
+          "y": 56,
+          "width": 720,
+          "height": 112,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "skin": "res://d5bad2fd-7c73-4d38-8906-bdecec227feb",
+          "color": "#ffffff"
+        }
+      ]
+    },
+    {
+      "_$id": "sajhwqah",
+      "_$type": "ViewStack",
+      "name": "Wheel",
+      "x": 360,
+      "y": 469,
+      "width": 691,
+      "height": 691,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "selectedIndex": null,
+      "_$comp": [
+        {
+          "_$type": "2bc9e3b3-9502-4c5e-8125-ca644d06ff67",
+          "scriptPath": "../src/components/Wheel.ts",
+          "wheel": {
+            "_$ref": "sajhwqah"
+          },
+          "wheelImage": {
+            "_$ref": "9qj9y4om"
+          }
+        }
+      ],
+      "_$child": [
+        {
           "_$id": "9qj9y4om",
           "_$type": "Image",
           "name": "Image",
-          "x": 450,
-          "y": 450,
-          "width": 900,
-          "height": 900,
+          "x": 345,
+          "y": 345,
+          "width": 691,
+          "height": 691,
           "anchorX": 0.5,
           "anchorY": 0.5,
           "skin": "res://2e82b8fe-a4f2-4496-8215-0e26502e2b1f",
+          "color": "#ffffff"
+        },
+        {
+          "_$id": "yniq9ucz",
+          "_$type": "Image",
+          "name": "Image_1",
+          "x": 345,
+          "y": 29,
+          "width": 131,
+          "height": 131,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "skin": "res://9afe09c5-f71a-4316-b995-9ca0ddfd73f6",
           "color": "#ffffff"
         }
       ]
@@ -524,19 +588,37 @@
       "_$type": "Label",
       "name": "Balance",
       "x": 360,
-      "y": 49,
-      "width": 688,
-      "height": 46,
+      "y": 30,
+      "width": 664,
+      "height": 50,
       "anchorX": 0.5,
       "anchorY": 0.5,
       "text": "0",
       "font": "res://48b1be50-44cc-46f7-9198-613e7378b9e1",
-      "fontSize": 25,
+      "fontSize": 40,
+      "color": "#ffffff",
+      "align": "right",
+      "stroke": 6,
+      "strokeColor": "#b56339"
+    },
+    {
+      "_$id": "h837d5dc",
+      "_$type": "Label",
+      "name": "BalanceLabel",
+      "x": 646,
+      "y": 58,
+      "width": 92,
+      "height": 40,
+      "anchorX": 0.5,
+      "anchorY": 0.5,
+      "text": "Balance",
+      "font": "res://48b1be50-44cc-46f7-9198-613e7378b9e1",
+      "fontSize": 20,
       "color": "#ffffff",
       "align": "right",
       "valign": "middle",
       "stroke": 3,
-      "strokeColor": "#0b74b9"
+      "strokeColor": "#b56339"
     },
     {
       "_$id": "y7x4djaw",
@@ -565,6 +647,9 @@
           "scriptPath": "../src/components/Snackbar.ts",
           "snackbar": {
             "_$ref": "upey8gzf"
+          },
+          "message": {
+            "_$ref": "d7rpc9x4"
           }
         }
       ],
@@ -600,6 +685,23 @@
           "valign": "middle",
           "stroke": 5,
           "strokeColor": "#bb762e"
+        }
+      ]
+    },
+    {
+      "_$id": "qro1duvc",
+      "_$type": "HBox",
+      "name": "Person",
+      "x": 260,
+      "y": 440,
+      "width": 200,
+      "height": 200,
+      "bgColor": "#000000",
+      "space": 0,
+      "_$comp": [
+        {
+          "_$type": "da314de4-e936-4f6b-85ab-7ad36a4fde3b",
+          "scriptPath": "../src/components/Person.ts"
         }
       ]
     }

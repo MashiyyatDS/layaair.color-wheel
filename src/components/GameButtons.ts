@@ -2,6 +2,7 @@ import { addClickEffect, addHoverPointer } from '~/utils'
 import { BettingArea } from './BettingArea'
 import { Snackbar } from './Snackbar'
 import useEmit from '~/composables/useEmit'
+import user from '~/states/user'
 
 const { regClass, property } = Laya
 
@@ -39,9 +40,11 @@ export class GameButtons extends Laya.Script {
 		this.confirmButton.on(Laya.Event.CLICK, () => {
 			const bettingAreas = this.getBettingAreas()
 
-			const betAmounts = bettingAreas.map((b) => ({
-				[b.property.type]: b.property.betAmount,
-			}))
+			const betAmounts = bettingAreas
+				.filter((b) => b.property.bet.placed > 0)
+				.map((b) => ({
+					[b.property.type]: b.property.bet.placed,
+				}))
 
 			for (const bettingArea of bettingAreas) {
 				bettingArea.property.confirmBet()
@@ -50,19 +53,31 @@ export class GameButtons extends Laya.Script {
 			snackbar.toggle()
 
 			useEmit().send({
-				'game-state': {
-					confirmed: true,
+				main: {
+					'balance-updated': user.tempBalance,
 				},
+				'game-state': { confirmed: true },
 			})
 		})
 	}
 
 	getBettingAreas(): { component: Laya.ViewStack; property: BettingArea }[] {
 		const baNames = ['x1', 'x2', 'x5', 'x10', 'x20', 'x40']
+		const betLimits: { [key: string]: { min: number; max: number } } = {
+			x1: { min: 50, max: 10000 },
+			x2: { min: 50, max: 5000 },
+			x5: { min: 50, max: 2500 },
+			x10: { min: 50, max: 1000 },
+			x20: { min: 50, max: 500 },
+			x40: { min: 50, max: 100 },
+		}
 
 		return baNames.map((bName) => {
 			const component = this.bettingAreaContainer.getChildByName(bName) as Laya.ViewStack
 			const property = component.getComponent(BettingArea)
+
+			property.maximumBet = betLimits[bName].max
+			property.minimumBet = betLimits[bName].min
 
 			return { component, property }
 		})
@@ -71,7 +86,7 @@ export class GameButtons extends Laya.Script {
 	onUpdate(): void {
 		const bettingAreas = this.getBettingAreas()
 
-		const betAmounts = bettingAreas.map((b) => b.property.betAmount)
+		const betAmounts = bettingAreas.map((b) => b.property.bet.placed)
 		const totalBetAmount = betAmounts.length ? betAmounts.reduce((curr, acc) => curr + acc) : 0
 
 		this.confirmButton.disabled = totalBetAmount <= 0

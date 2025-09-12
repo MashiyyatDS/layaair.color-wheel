@@ -1,5 +1,7 @@
 import gsap, { Back, Circ, Linear } from 'gsap'
+import { Person } from '~/components/Person'
 import useEmit from '~/composables/useEmit'
+import user from '~/states/user'
 import { animateNumbers, formatCurrency } from '~/utils'
 
 const { regClass, property } = Laya
@@ -12,51 +14,58 @@ export class MainScene extends Laya.Script {
 	@property(Laya.ViewStack)
 	private wheel: Laya.ViewStack
 
+	@property(Laya.ViewStack)
+	private bettingAreaContainer: Laya.ViewStack
+
+	@property(Laya.ViewStack)
+	private coinsContainer: Laya.ViewStack
+
+	@property(Laya.ViewStack)
+	private gameButtons: Laya.ViewStack
+
 	onAwake(): void {
+		this.balance.text = formatCurrency(user.balance, 'PHP').cm
+
 		useEmit().listen({
-			'game-state': {
-				confirmed: () => {
-					const tl = gsap.timeline({ defaults: { delay: 1 } })
-					tl.to(this.wheel, {
-						scaleX: 2,
-						scaleY: 2,
-						y: 920,
-						duration: 0.5,
-						ease: Back.easeInOut,
-					})
-						.to(this.wheel, {
-							delay: 1,
-							rotation: 3600,
-							duration: 10,
-							ease: Circ.easeInOut,
-							onComplete: () => (this.wheel.rotation = 0),
-						})
-						.to(this.wheel, {
-							scaleX: 1,
-							scaleY: 1,
-							delay: 1.5,
-							y: 469,
-							onComplete: () => {
-								useEmit().send({ 'game-state': { start: true } })
-							},
-						})
+			main: {
+				'balance-updated': (balance: number) => {
+					animateNumbers(this.balance, balance)
 				},
+			},
+			'game-state': {
+				start: () => {
+					user.tempBalance = user.balance
+
+					this.toggle(false)
+				},
+				dealing: () => this.toggle(),
 			},
 		})
 	}
 
-	private initBalance = 100000
-	onKeyDown(evt: Laya.Event): void {
-		if (evt.charCode === 'KeyX') {
-			animateNumbers(this.balance, this.initBalance)
-
-			this.initBalance += 1000
-		}
+	generateRandom6DigitNumber(): number {
+		const min = 100000
+		const max = 999999
+		return Math.floor(Math.random() * (max - min + 1) + min)
 	}
 
-	generateRandom6DigitNumber(): number {
-		const min = 100000 // Minimum 6-digit number
-		const max = 999999 // Maximum 6-digit number
-		return Math.floor(Math.random() * (max - min + 1) + min)
+	toggle(hidden: boolean = true) {
+		gsap.to(this.bettingAreaContainer, {
+			y: hidden ? 900 : 709,
+			duration: 0.8,
+			ease: Back.easeInOut,
+		})
+
+		gsap.to(this.coinsContainer, {
+			y: hidden ? 1150 : 1016,
+			duration: 0.8,
+			ease: Back.easeInOut,
+		})
+
+		gsap.to(this.gameButtons, {
+			y: hidden ? 1150 : 911,
+			duration: 0.8,
+			ease: Back.easeInOut,
+		})
 	}
 }
