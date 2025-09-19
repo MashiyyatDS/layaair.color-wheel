@@ -103,3 +103,50 @@ export function hitTestPoint(nodes: any | any[], coordinates: { x: number; y: nu
 
 	return [nodes.hitTestPoint(coordinates.x, coordinates.y)]
 }
+
+export function getCoordinates(
+	startX: number,
+	startY: number,
+	targetX: number,
+	targetY: number,
+	speed: number,
+	width: number,
+	height: number
+): {
+	x: number
+	y: number
+	direction: string
+	distance: number
+	duration: number
+} {
+	const dx = targetX - startX
+	const dy = targetY - startY
+
+	const distance = Math.sqrt(dx * dx + dy * dy)
+	const duration = speed > 0 ? distance / speed : 0
+
+	const hThreshold = width * 0.5
+	const vThreshold = height * 0.5
+
+	let direction = 'None'
+
+	if (Math.abs(dx) > Math.abs(dy) + hThreshold) {
+		direction = dx > 0 ? 'Right' : 'Left'
+	} else if (Math.abs(dy) > Math.abs(dx) + vThreshold) {
+		direction = dy > 0 ? 'Bottom' : 'Top'
+	} else {
+		// diagonal
+		if (dx > 0 && dy > 0) direction = 'BottomRight'
+		else if (dx > 0 && dy < 0) direction = 'TopRight'
+		else if (dx < 0 && dy > 0) direction = 'BottomLeft'
+		else if (dx < 0 && dy < 0) direction = 'TopLeft'
+	}
+
+	return {
+		x: targetX,
+		y: targetY,
+		direction,
+		distance,
+		duration,
+	}
+}

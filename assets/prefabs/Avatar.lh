@@ -1,0 +1,22 @@
+{
+  "_$ver": 1,
+  "_$id": "1tyobd8x",
+  "_$type": "ViewStack",
+  "name": "Avatar",
+  "x": 4,
+  "y": 16,
+  "width": 105,
+  "height": 105,
+  "anchorX": 0.5,
+  "anchorY": 0.5,
+  "selectedIndex": null,
+  "_$comp": [
+    {
+      "_$type": "4f68db1a-d0f5-4681-a443-9e2806493ed9",
+      "scriptPath": "../src/components/Avatar.ts",
+      "avatar": {
+        "_$ref": "1tyobd8x"
+      }
+    }
+  ]
+}

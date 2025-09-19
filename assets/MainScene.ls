@@ -1,6 +1,20 @@
 {
   "_$ver": 1,
   "_$id": "lx8mwule",
+  "_$preloads": [
+    "res://9afe09c5-f71a-4316-b995-9ca0ddfd73f6",
+    "res://ba31ea19-00bc-49e1-862b-0f2840abdf6b",
+    "res://d6cd86bb-bcb8-4e38-975c-9f828b02d502",
+    "res://59b60604-b5eb-4c54-a4f3-4506dd407c9f",
+    "res://9059767f-68f2-4ab0-a161-10055ddc79e6",
+    "res://57063b9a-0b1b-4bb6-9e9a-25424ec2a323",
+    "res://91551022-12a3-4742-b315-59d4de942d25",
+    "res://cfeef2b9-a4ce-40cb-adbb-1e6d5a2a2cf9",
+    "res://78ea024e-0f97-405a-9e4c-029e0ce67fcf",
+    "res://3942d77a-6443-41c1-b277-7dbf5f31812c",
+    "res://d5bad2fd-7c73-4d38-8906-bdecec227feb",
+    "res://2e82b8fe-a4f2-4496-8215-0e26502e2b1f"
+  ],
   "_$type": "Scene",
   "left": 0,
   "right": 0,
@@ -27,9 +41,6 @@
       },
       "gameButtons": {
         "_$ref": "rigfoz01"
-      },
-      "person": {
-        "_$ref": "qro1duvc"
       }
     }
   ],
@@ -685,23 +696,6 @@
           "valign": "middle",
           "stroke": 5,
           "strokeColor": "#bb762e"
-        }
-      ]
-    },
-    {
-      "_$id": "qro1duvc",
-      "_$type": "HBox",
-      "name": "Person",
-      "x": 260,
-      "y": 440,
-      "width": 200,
-      "height": 200,
-      "bgColor": "#000000",
-      "space": 0,
-      "_$comp": [
-        {
-          "_$type": "da314de4-e936-4f6b-85ab-7ad36a4fde3b",
-          "scriptPath": "../src/components/Person.ts"
         }
       ]
     }

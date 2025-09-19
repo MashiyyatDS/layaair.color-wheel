@@ -1,0 +1,143 @@
+{
+  "frames": {
+    "down1.png": {
+      "frame": {
+        "idx": 0,
+        "x": 39,
+        "y": 92,
+        "w": 37,
+        "h": 82
+      },
+      "sourceSize": {
+        "w": 37,
+        "h": 83
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    "down2.png": {
+      "frame": {
+        "idx": 0,
+        "x": 0,
+        "y": 0,
+        "w": 35,
+        "h": 90
+      },
+      "sourceSize": {
+        "w": 35,
+        "h": 90
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    "down3.png": {
+      "frame": {
+        "idx": 0,
+        "x": 147,
+        "y": 90,
+        "w": 33,
+        "h": 93
+      },
+      "sourceSize": {
+        "w": 33,
+        "h": 93
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    "down4.png": {
+      "frame": {
+        "idx": 0,
+        "x": 37,
+        "y": 0,
+        "w": 35,
+        "h": 90
+      },
+      "sourceSize": {
+        "w": 36,
+        "h": 90
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    "down5.png": {
+      "frame": {
+        "idx": 0,
+        "x": 0,
+        "y": 92,
+        "w": 37,
+        "h": 85
+      },
+      "sourceSize": {
+        "w": 37,
+        "h": 85
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    "down6.png": {
+      "frame": {
+        "idx": 0,
+        "x": 74,
+        "y": 0,
+        "w": 35,
+        "h": 90
+      },
+      "sourceSize": {
+        "w": 35,
+        "h": 90
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    "down7.png": {
+      "frame": {
+        "idx": 0,
+        "x": 111,
+        "y": 0,
+        "w": 34,
+        "h": 91
+      },
+      "sourceSize": {
+        "w": 34,
+        "h": 91
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    "down8.png": {
+      "frame": {
+        "idx": 0,
+        "x": 147,
+        "y": 0,
+        "w": 35,
+        "h": 88
+      },
+      "sourceSize": {
+        "w": 35,
+        "h": 88
+      },
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0
+      }
+    }
+  },
+  "meta": {
+    "trimImage": true
+  }
+}

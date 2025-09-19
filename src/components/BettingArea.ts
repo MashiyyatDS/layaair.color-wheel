@@ -159,7 +159,7 @@ export class BettingArea extends Laya.Script {
 		this.bettingArea.removeChildren(2)
 	}
 
-	confirmBet() {
+	confirmBet(): number {
 		if (!this.bet.placed) return
 
 		this.bet.confirmed += this.bet.placed
@@ -207,11 +207,13 @@ export class BettingArea extends Laya.Script {
 
 		if (amount < this.minimumBet && user.tempBalance < this.minimumBet) {
 			amount = user.tempBalance
-		} else if (amount < this.minimumBet) {
-			snackbar.toggle(`Minimum bet\n${formatCurrency(this.minimumBet, 'PHP').cm}`)
-
-			return 0
 		}
+
+		//else if (amount < this.minimumBet) {
+		//	snackbar.toggle(`Minimum bet\n${formatCurrency(this.minimumBet, 'PHP').cm}`)
+
+		//	return 0
+		//}
 
 		if (this.bet.amount + amount > this.maximumBet) {
 			snackbar.toggle(`Maximum bet\n${formatCurrency(this.maximumBet, 'PHP').cm}`)
