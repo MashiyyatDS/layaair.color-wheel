@@ -4621,10 +4621,6 @@
       }
       if (amount < this.minimumBet && user_default.tempBalance < this.minimumBet) {
         amount = user_default.tempBalance;
-      } else if (amount < this.minimumBet) {
-        snackbar.toggle(`Minimum bet
-${formatCurrency(this.minimumBet, "PHP").cm}`);
-        return 0;
       }
       if (this.bet.amount + amount > this.maximumBet) {
         snackbar.toggle(`Maximum bet
@@ -4882,6 +4878,10 @@ ${formatCurrency(this.maximumBet, "PHP").cm}`);
         const betAmounts = bettingAreas.filter((b) => b.property.bet.placed > 0).map((b) => ({
           [b.property.type]: b.property.bet.placed
         }));
+        const hasBelowMinimum = bettingAreas.map((bA) => {
+          const totalBet = bA.property.bet.placed + bA.property.bet.confirmed;
+          return totalBet < bA.property.minimumBet && totalBet !== 0;
+        }).some((below) => below);
         for (const bettingArea of bettingAreas) {
           bettingArea.property.confirmBet();
         }
@@ -4914,9 +4914,13 @@ ${formatCurrency(this.maximumBet, "PHP").cm}`);
     }
     onUpdate() {
       const bettingAreas = this.getBettingAreas();
+      const hasBelowMinimum = bettingAreas.map((bA) => {
+        const totalBet = bA.property.bet.placed + bA.property.bet.confirmed;
+        return totalBet < bA.property.minimumBet && totalBet !== 0;
+      }).some((below) => below);
       const betAmounts = bettingAreas.map((b) => b.property.bet.placed);
       const totalBetAmount = betAmounts.length ? betAmounts.reduce((curr, acc) => curr + acc) : 0;
-      this.confirmButton.disabled = totalBetAmount <= 0;
+      this.confirmButton.disabled = totalBetAmount <= 0 || hasBelowMinimum;
       this.cancelButton.disabled = totalBetAmount <= 0;
     }
   };
