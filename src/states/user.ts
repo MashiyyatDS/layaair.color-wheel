@@ -17,3 +17,21 @@ export default {
 	balance: 100000,
 	tempBalance: 100000,
 }
+
+interface UserInterface {
+	selectedCoin: string
+	coins: { active: boolean; amount: string; selected: boolean }[]
+	balance: number
+	tempBalance: number
+}
+
+class User implements UserInterface {
+	balance: number = 0
+	tempBalance: number = 0
+	coins: []
+	selectedCoin: string = ''
+
+	selectCoin() {}
+}
+
+export const user = new User()

@@ -1,9 +1,9 @@
-import useEmit from '~/composables/useEmit'
-import { Coin } from './Coin'
-import user from '~/states/user'
-import { CoinsEditor } from './CoinsEditor'
 import { addClickEffect, addHoverPointer } from '~/utils'
+import { Coin } from '~/components/Coins/Coin'
+import useEmit from '~/composables/useEmit'
+import { CoinsEditor } from './CoinsEditor'
 import { CoinInterface } from '~/types'
+import user from '~/states/user'
 
 const { regClass, property } = Laya
 

@@ -1,6 +1,5 @@
 import { formatCurrency } from '~/utils'
 import { CoinsEditor } from './CoinsEditor'
-import useEmit from '~/composables/useEmit'
 import user from '~/states/user'
 
 const { regClass, property } = Laya

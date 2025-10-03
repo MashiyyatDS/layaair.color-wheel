@@ -1,9 +1,9 @@
 import { addHoverPointer, animateNumbers, formatCurrency } from '~/utils'
-import user from '~/states/user'
-import { Coin } from './Coin'
-import gsap, { Back, Linear } from 'gsap'
+import { Snackbar } from '~/components/Snackbar'
+import { Coin } from '~/components/Coins/Coin'
 import useEmit from '~/composables/useEmit'
-import { Snackbar } from './Snackbar'
+import gsap, { Back, Linear } from 'gsap'
+import user from '~/states/user'
 
 const { regClass, property } = Laya
 

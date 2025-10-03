@@ -17,6 +17,5 @@
 			"@@/*": ["../../*"]
 		}
 	},
-	//"extends": "./.nitro/types/tsconfig.json",
 	"include": ["./assets", "./src", "./engine"]
 }
